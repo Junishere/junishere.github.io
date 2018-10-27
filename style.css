@@ -1,6 +1,9 @@
 h1 {
     font-size: 50px;
     text-align: center;
+    text-decoration: underline;
+    font-weight: 900;
+    font-family: sans-serif;
 }
 p {
     color: rgba(21, 153, 177, 0.781);
