@@ -5,6 +5,9 @@ h1 {
     font-weight: 900;
     font-family: sans-serif;
 }
+span {
+    font-weight: bold;
+}
 p {
     color: rgba(21, 153, 177, 0.781);
 }
