@@ -26,8 +26,8 @@ body {
 a:link,
 a:visited {
     text-decoration: none;
-    color:
+    color: brown;
 }
 a:hover {
-    background-color: greenyellow
+    background-color: rgba(224, 184, 131, 0.63)
 }
