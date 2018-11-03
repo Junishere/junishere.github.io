@@ -22,4 +22,12 @@ p {
 }
 body {
     background-color: rgba(224, 184, 131, 0.61) 
-} 
+}
+a:link,
+a:visited {
+    text-decoration: none;
+    color:
+}
+a:hover {
+    background-color: greenyellow
+}
