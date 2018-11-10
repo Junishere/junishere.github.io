@@ -4,6 +4,9 @@ h1 {
     text-decoration: underline;
     font-weight: 900;
     font-family: sans-serif;
+    border-style: groove;
+    border-width: thick;
+    border-color: lightskyblue
 }
 h2 {
     text-align: center;
