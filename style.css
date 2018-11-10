@@ -39,3 +39,7 @@ a:visited {
 a:hover {
     background-color: rgba(224, 184, 131, 0.63);
 }
+#myCanvas {
+    border-style: solid;
+    background-color: white;
+}
