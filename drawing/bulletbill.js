@@ -1,0 +1,31 @@
+var canvas;
+var ctx;
+var unit =30;
+
+window.onload = init;
+
+function init() {
+    canvas = document.getElementById("myCanvas");
+    ctx = canvas.getContext("2d");
+    // filling a rectangle
+    // ctx.fillRect(0,0,100,100);
+    // // change color of fill
+    
+    // ctx.fillRect(100,0,100,100);
+    // ctx.fillStyle = "black";
+    // ctx.fillRect(100,0,100,100);
+    ctx.fillRect(0,0,2*unit,1*unit);
+    ctx.fillRect(4*unit,0,6*unit,1*unit);
+    ctx.fillRect(2*unit,1*unit,2*unit,1*unit);
+    ctx.fillRect(9*unit,1*unit,3*unit,1*unit);
+    ctx.fillRect(3*unit,2*unit,1*unit,1*unit);
+    ctx.fillRect(10*unit,2*unit,4*unit,1*unit);
+    ctx.fillStyle = "#ABAAA6";
+    ctx.fillRect(2*unit,0,2*unit,1*unit);
+    ctx.fillRect(0,2*unit,2*unit,1*unit);
+    ctx.fillRect(4*unit,2*unit,5*unit,1*unit);
+    ctx.fillRect(2*unit,3*unit,1*unit,1*unit);
+    ctx.fillRect(9*unit,3*unit,1*unit,1*unit);
+    drawRuler(5);
+    // x = horizontal/left to right, y = vertical/top to bottom, w = left to right, h = height
+}
