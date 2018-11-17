@@ -20,6 +20,15 @@ function init() {
     ctx.fillRect(9*unit,1*unit,3*unit,1*unit);
     ctx.fillRect(3*unit,2*unit,1*unit,1*unit);
     ctx.fillRect(10*unit,2*unit,4*unit,1*unit);
+    ctx.fillRect(0,3*unit,2*unit,1*unit);
+    ctx.fillRect(3*unit,3*unit,8*unit,1*unit);
+    ctx.fillRect(12*unit,3*unit,3*unit,1*unit);
+    ctx.fillRect(0*unit,4*unit,11*unit,1*unit);
+    ctx.fillRect(0*unit,5*unit,11*unit,1*unit);
+    ctx.fillRect(13*unit,4*unit,2*unit,1*unit);
+    ctx.fillRect(13*unit,5*unit,1*unit,1*unit);
+    ctx.fillRect(15*unit,5*unit,1*unit,1*unit);
+    ctx.fillRect(0,6*unit,5*unit,1*unit);
     ctx.fillStyle = "#ABAAA6";
     ctx.fillRect(2*unit,0,2*unit,1*unit);
     ctx.fillRect(0,2*unit,2*unit,1*unit);
