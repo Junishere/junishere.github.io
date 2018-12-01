@@ -1,0 +1,45 @@
+html {
+    background-color: rgba(24, 19, 12, 0.753);
+}
+
+header { 
+    color: rgba(223, 157, 15, 0.801);
+    text-decoration: underline;
+    text-align: left;
+    font-size: 40px;
+    font-family: cursive;
+}
+body {
+    text-align: center;
+    font-size: 30px;
+}
+footer {
+    font-size: 20px;
+    text-align: center;
+    text-decoration: overline;
+}
+a:link,
+a:visited {
+    color: black;
+}
+ a:hover {
+     color: rgba(223, 157, 15, 0.801)
+ }
+ nav {
+     font-family: monospace;
+ }
+p {
+    font-size: 21px;
+}
+h2 {
+    color: rgba(223, 157, 15, 0.801);
+    font-family: cursive;
+    text-align: center;
+}
+h1 {
+    border-style: groove;
+    border-width: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
