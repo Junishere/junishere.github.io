@@ -55,6 +55,6 @@ function init() {
     ctx.fillRect(5*unit,9*unit,3*unit,1*unit);
     ctx.fillRect(7*unit,10*unit,3*unit,1*unit);
     ctx.fillRect(10*unit,9*unit,1*unit,1*unit);
-    drawRuler(5);
+    // drawRuler(5);
     // x = horizontal/left to right, y = vertical/top to bottom, w = left to right, h = height
 }
