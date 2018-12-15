@@ -13,13 +13,11 @@ h1 {
     margin-left: 500px;
     margin-right: 500px;
 }
-h2 {
-    text-align: center;
-}
-p {
-    text-align: center;
-}
-body {
+h2,
+p,
+body,
+li,
+ol {
     text-align: center;
 }
 span {
