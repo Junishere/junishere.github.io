@@ -12,5 +12,6 @@ function init() {
     canvas = document.getElementById("myCanvas");
 // Setting up the context to 20.
 ctx= canvas.getContext('2d');
-drawRuler(10);
+drawsans();
+drawRuler(5);
 }
