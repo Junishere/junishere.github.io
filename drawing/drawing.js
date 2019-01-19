@@ -1,6 +1,6 @@
 var canvas;
 var ctx;
-var UNIT =10;
+var UNIT =5;
 
 window.onload = init;
 
