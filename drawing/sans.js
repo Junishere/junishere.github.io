@@ -13,5 +13,5 @@ function init() {
 // Setting up the context to 20.
 ctx= canvas.getContext('2d');
 drawsans();
-drawRuler(5);
+//drawRuler(5)
 }
