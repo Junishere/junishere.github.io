@@ -1,6 +1,6 @@
 var canvas;
 var ctx;
-const UNIT = 20;
+const UNIT = 10;
 
 window.onload = init;
 
@@ -10,6 +10,9 @@ function init() {
     ctx = canvas.getContext("2d");
     // translatedRect();
     translatedSans();
+    translatedBulletBill();
+    translatedMysteryBox();
+    translatedCoin();
 }
 
 function translatedRect() {
@@ -23,5 +26,21 @@ function translatedRect() {
 }
 
 function translatedSans() {
-    drawSans();
+    ctx.save();
+    ctx.translate(20*UNIT,5*UNIT);
+    drawSans(0,0);
+    ctx.restore();
+}
+
+function translatedBulletBill() {
+    drawBulletBill();
+}
+
+
+function translatedMysteryBox() {
+    drawMysteryBox();
+}
+
+function translatedCoin() {
+    drawCoin();
 }
