@@ -1,7 +1,7 @@
 // Variable: Sometjing that stores a value that could change over time.
 var canvas;
 var ctx;
-var unit = 20;
+var UNIT = 20;
 
 window.onload = init;
 // When the window (page) loads up, it calls the init function.
@@ -12,6 +12,6 @@ function init() {
     canvas = document.getElementById("myCanvas");
 // Setting up the context to 20.
 ctx= canvas.getContext('2d');
-drawsans();
+drawSans();
 //drawRuler(5)
 }
