@@ -43,6 +43,7 @@ function drawHead() {
 }
 
 function drawBody() {
+    ctx.fillStyle = "black";
     ctx.fillRect(2*UNIT,14*UNIT,1*UNIT,1*UNIT);
     ctx.fillRect(4*UNIT,14*UNIT,15*UNIT,1*UNIT);
     ctx.fillRect(20*UNIT,14*UNIT,1*UNIT,1*UNIT);

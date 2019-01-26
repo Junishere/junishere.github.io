@@ -19,8 +19,18 @@
         <footer>
             <p>&copy; 2019</p>
         </footer>
+        <script>
+                var canvas;
+                var ctx;
+                const UNIT = 10;
+                window.onload = init;
+                function init() {
+                    canvas = document.getElementById("myCanvas");
+                    ctx = canvas.getContext("2d");
+                    drawSans();
+                }
+            </script>
         <script src="drawSans.js"></script>
-        <script src="sans.js"></script>
         <script src="ruler.js"></script>
     </body>
 </html>

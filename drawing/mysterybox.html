@@ -18,7 +18,18 @@
         <footer>
             <p>&copy; 2019</p>
         </footer>
-        <script src="./mysterybox.js"></script>
+        <script>
+                var canvas;
+                var ctx;
+                const UNIT = 10;
+                window.onload = init;
+                function init() {
+                    canvas = document.getElementById("myCanvas");
+                    ctx = canvas.getContext("2d");
+                    drawMysteryBox();
+                }
+        </script>
+        <script src="drawMysteryBox.js"></script>
         <script src="ruler.js"></script>
     </body>
 </html>

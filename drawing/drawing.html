@@ -28,6 +28,21 @@
         <footer>
             <p>&copy; 2019</p>
         </footer>
+        <script>
+            var canvas;
+var ctx;
+var UNIT =5;
+
+window.onload = init;
+
+function init() {
+    canvas = document.getElementById("myCanvas");
+    ctx = canvas.getContext("2d");
+    
+    drawCoin();
+    drawRuler(5);
+}
+        </script>
         <script src="drawing.js"></script>
         <script src="drawCoin.js"></script>
         <script src="ruler.js"></script>

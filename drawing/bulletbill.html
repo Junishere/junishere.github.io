@@ -19,7 +19,18 @@
         <footer>
             <p>&copy; 2019</p>
         </footer>
-        <script src="bulletbill.js"></script>
+        <script>
+                var canvas;
+                var ctx;
+                const UNIT = 10;
+                window.onload = init;
+                function init() {
+                    canvas = document.getElementById("myCanvas");
+                    ctx = canvas.getContext("2d");
+                    drawBulletBill();
+                }
+        </script>
+        <script src="drawbulletbill.js"></script>
         <script src="ruler.js"></script>
     </body>
 </html>
