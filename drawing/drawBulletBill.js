@@ -1,4 +1,5 @@
 function drawBulletBill() {
+    ctx.fillStyle = "black";
     ctx.fillRect(0,0,2*UNIT,1*UNIT);
     ctx.fillRect(4*UNIT,0,6*UNIT,1*UNIT);
     ctx.fillRect(2*UNIT,1*UNIT,2*UNIT,1*UNIT);

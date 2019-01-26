@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scale</title>
+        <link rel="stylesheet" href="../style.css">
+    </head>
+    <body>
+        <header>
+          <h1>Scale</h1>
+          <a href="./drawing.html">Go Back</a>
+
+        </header>
+        <nav>
+        
+        </nav>
+        <section>
+            <canvas id="myCanvas" width="1000" height="700"></canvas>
+        </section>
+        <footer>
+            <p>&copy; 2019</p>
+        </footer>
+        <script>
+            var canvas;
+            var ctx;
+            const UNIT = 10;
+            window.onload = init;
+            function init() {
+                canvas = document.getElementById("myCanvas");
+                ctx = canvas.getContext("2d");
+                drawBulletBill();
+                ctx.save();
+                ctx.translate(0*UNIT, 20*UNIT);
+                drawBulletBill();
+                ctx.restore();
+                drawRuler(10);
+                
+                ctx.save();
+                ctx.scale(2,2);
+                ctx.translate(27*UNIT, 5*UNIT);
+                drawSans();
+                ctx.restore();
+            }
+        </script>
+        <script src="drawBulletBill.js"></script>
+        <script src="drawSans.js"></script>
+        <script src="ruler.js"></script>
+    </body>
+</html>
