@@ -10,9 +10,9 @@ function init() {
     ctx = canvas.getContext("2d");
     // translatedRect();
     translatedSans();
-    translatedBulletBill();
-    translatedMysteryBox();
-    translatedCoin();
+    // translatedBulletBill();
+    // translatedMysteryBox();
+    // translatedCoin();
 }
 
 function translatedRect() {
@@ -27,8 +27,8 @@ function translatedRect() {
 
 function translatedSans() {
     ctx.save();
-    ctx.translate(20*UNIT,5*UNIT);
-    drawSans(0,0);
+    // ctx.translate(20*UNIT,5*UNIT);
+    drawSans();
     ctx.restore();
 }
 

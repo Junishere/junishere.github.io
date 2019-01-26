@@ -7,7 +7,9 @@ window.onload = init;
 function init() {
     canvas = document.getElementById("myCanvas");
     ctx = canvas.getContext("2d");
+    
     drawCoin();
+    drawRuler(5);
     // filling a rectangle
     // ctx.fillRect(0,0,100,100);
     // // change color of fill
