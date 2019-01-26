@@ -41,4 +41,19 @@ function drawBulletBill() {
     ctx.fillRect(5*UNIT,9*UNIT,3*UNIT,1*UNIT);
     ctx.fillRect(7*UNIT,10*UNIT,3*UNIT,1*UNIT);
     ctx.fillRect(10*UNIT,9*UNIT,1*UNIT,1*UNIT);
+    ctx.fillStyle = "white";
+    ctx.fillRect(0,1*UNIT,2*UNIT,1*UNIT);
+    ctx.fillRect(2*UNIT,2*UNIT,1*UNIT,1*UNIT);
+    ctx.fillRect(4*UNIT,1*UNIT,5*UNIT,1*UNIT);
+    ctx.fillRect(9*UNIT,2*UNIT,1*UNIT,1*UNIT);
+    ctx.fillRect(11*UNIT,3*UNIT,1*UNIT,1*UNIT);
+    ctx.fillRect(11*UNIT,4*UNIT,2*UNIT,1*UNIT);
+    ctx.fillRect(11*UNIT,5*UNIT,2*UNIT,1*UNIT);
+    ctx.fillRect(12*UNIT,6*UNIT,3*UNIT,1*UNIT);
+    ctx.fillRect(14*UNIT,5*UNIT,1*UNIT,1*UNIT);
+    ctx.fillRect(5*UNIT,6*UNIT,2*UNIT,1*UNIT);
+    ctx.fillRect(4*UNIT,7*UNIT,3*UNIT,1*UNIT);
+    ctx.fillRect(6*UNIT,8*UNIT,5*UNIT,1*UNIT);
+    ctx.fillRect(8*UNIT,7*UNIT,2*UNIT,1*UNIT);
+    ctx.fillRect(8*UNIT,9*UNIT,2*UNIT,1*UNIT);
 }
