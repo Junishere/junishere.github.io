@@ -28,7 +28,7 @@ function drawBody() {
     ctx.fillRect(5*UNIT,3*UNIT,2*UNIT,1*UNIT);
     ctx.fillRect(4*UNIT,4*UNIT,1*UNIT,8*UNIT);
 
-    ctx.fillStyle = "orange";
+    ctx.fillStyle = "#F7BC32";
     ctx.fillRect(4*UNIT,2*UNIT,5*UNIT,1*UNIT);
     ctx.fillRect(3*UNIT,3*UNIT,1*UNIT,1*UNIT);
     ctx.fillRect(8*UNIT,3*UNIT,1*UNIT,1*UNIT);
@@ -39,11 +39,14 @@ function drawBody() {
     ctx.fillRect(6*UNIT,4*UNIT,1*UNIT,6*UNIT);
     ctx.fillRect(5*UNIT,10*UNIT,2*UNIT,2*UNIT);
 
-    ctx.fillStyle = "brown";
+    ctx.fillStyle = "#AD812B";
     ctx.fillRect(9*UNIT,2*UNIT,1*UNIT,2*UNIT);
     ctx.fillRect(10*UNIT,4*UNIT,1*UNIT,8*UNIT);
     ctx.fillRect(9*UNIT,12*UNIT,1*UNIT,1*UNIT);
     ctx.fillRect(8*UNIT,13*UNIT,2*UNIT,1*UNIT);
     ctx.fillRect(4*UNIT,14*UNIT,4*UNIT,1*UNIT);
+
+    ctx.fillStyle = "yellow";
+    ctx.fillRect(4*UNIT,3*UNIT,1*UNIT,1*UNIT);
 }
 // x = horizontal/left to right, y = vertical/top to bottom, w = left to right, h = height

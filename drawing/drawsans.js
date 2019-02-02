@@ -110,4 +110,29 @@ function drawBody() {
     ctx.fillRect(21*UNIT,28*UNIT,1*UNIT,1*UNIT);
     ctx.fillRect(2*UNIT,29*UNIT,6*UNIT,1*UNIT);
     ctx.fillRect(15*UNIT,29*UNIT,6*UNIT,1*UNIT);
+
+    ctx.fillStyle = "white";
+    ctx.fillRect(7*UNIT,1*UNIT,9*UNIT,1*UNIT);
+    ctx.fillRect(5*UNIT,2*UNIT,13*UNIT,1*UNIT);
+    ctx.fillRect(5*UNIT,3*UNIT,13*UNIT,1*UNIT);
+    ctx.fillRect(4*UNIT,4*UNIT,15*UNIT,1*UNIT);
+    ctx.fillRect(4*UNIT,5*UNIT,2*UNIT,1*UNIT);
+    ctx.fillRect(9*UNIT,5*UNIT,5*UNIT,1*UNIT);
+    ctx.fillRect(17*UNIT,5*UNIT,2*UNIT,1*UNIT);
+    ctx.fillRect(4*UNIT,6*UNIT,2*UNIT,1*UNIT);
+    ctx.fillRect(9*UNIT,6*UNIT,5*UNIT,1*UNIT);
+    ctx.fillRect(17*UNIT,6*UNIT,2*UNIT,1*UNIT);
+    ctx.fillRect(4*UNIT,7*UNIT,2*UNIT,1*UNIT);
+    ctx.fillRect(9*UNIT,7*UNIT,2*UNIT,1*UNIT);
+    ctx.fillRect(12*UNIT,7*UNIT,2*UNIT,1*UNIT);
+    ctx.fillRect(17*UNIT,7*UNIT,2*UNIT,1*UNIT);
+    ctx.fillRect(5*UNIT,8*UNIT,5*UNIT,1*UNIT);
+    ctx.fillRect(13*UNIT,8*UNIT,5*UNIT,1*UNIT);
+    ctx.fillRect(5*UNIT,9*UNIT,1*UNIT,1*UNIT);
+    ctx.fillRect(7*UNIT,9*UNIT,9*UNIT,1*UNIT);
+    ctx.fillRect(17*UNIT,9*UNIT,1*UNIT,1*UNIT);
+    ctx.fillRect(4*UNIT,10*UNIT,2*UNIT,1*UNIT);
+    ctx.fillRect(17*UNIT,10*UNIT,2*UNIT,1*UNIT);
+    ctx.fillRect(4*UNIT,11*UNIT,3*UNIT,1*UNIT);
+    ctx.fillRect(8*UNIT,11*UNIT,1*UNIT,1*UNIT);
 }
