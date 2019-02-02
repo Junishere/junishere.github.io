@@ -1,9 +1,9 @@
 function drawSans() {
-    drawHead();
-    drawBody();
+    drawSansHead();
+    drawSansBody();
 }
 
-function drawHead() {
+function drawSansHead() {
     ctx.fillStyle = "black";
     // Creating a filled rectangle
     // x = horizontal/left to right, y = vertical/top to bottom, w = left to right, h = height
@@ -42,7 +42,7 @@ function drawHead() {
     ctx.fillRect(8*UNIT,12*UNIT,7*UNIT,1*UNIT);
 }
 
-function drawBody() {
+function drawSansBody() {
     ctx.fillStyle = "black";
     ctx.fillRect(2*UNIT,14*UNIT,1*UNIT,1*UNIT);
     ctx.fillRect(4*UNIT,14*UNIT,15*UNIT,1*UNIT);
