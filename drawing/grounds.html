@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Ground</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Ground</h1>
+        <a href="drawing.html">Go Home</a>
+    </header>
+    <nav>
+
+    </nav>
+    <section>
+        <canvas id="myCanvas" width="1000" height="700"></canvas>
+    </section>
+    <footer>
+        <p>&copy; 2019</p>
+    </footer>
+    <script>
+        var canvas;
+        var ctx;
+        var UNIT = 15;
+
+        window.onload = init;
+
+        function init() {
+            canvas = document.getElementById("myCanvas");
+            ctx = canvas.getContext("2d");
+            drawGrounds();
+        }
+    </script>
+    <script src="ruler.js"></script>
+    <script src="drawGrounds.js"></script>
+</body>
+
+</html>
