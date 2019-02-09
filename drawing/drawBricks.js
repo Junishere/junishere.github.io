@@ -27,6 +27,7 @@ function drawBrick() {
     ctx.fillRect(7*UNIT,15*UNIT,1*UNIT,1*UNIT);
     ctx.fillRect(15*UNIT,15*UNIT,1*UNIT,1*UNIT);
     ctx.fillRect(15*UNIT,5*UNIT,1*UNIT,1*UNIT);
+    ctx.fillRect(12*UNIT,1*UNIT,4*UNIT,1*UNIT);
 
 
     ctx.fillStyle = "#E3C597";
