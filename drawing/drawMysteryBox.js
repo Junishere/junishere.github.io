@@ -1,4 +1,8 @@
-function drawMysteryBox() {
+function drawMysteryBox(x,y,scale) {
+    ctx.save();
+    ctx.translate(x*UNIT,y*UNIT);
+    ctx.scale(scale,scale);
+
     ctx.fillRect(2*UNIT,0*UNIT,15*UNIT,1*UNIT);
     ctx.fillRect(1*UNIT,1*UNIT,1*UNIT,1*UNIT);
     ctx.fillRect(17*UNIT,1*UNIT,1*UNIT,1*UNIT);
@@ -80,4 +84,5 @@ function drawMysteryBox() {
     ctx.fillRect(8*UNIT,11*UNIT,3*UNIT,1*UNIT);
     ctx.fillRect(8*UNIT,13*UNIT,3*UNIT,1*UNIT);
     ctx.fillRect(8*UNIT,14*UNIT,3*UNIT,1*UNIT);
+    ctx.restore();
 }

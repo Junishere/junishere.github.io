@@ -21,16 +21,32 @@
     <footer>
         <p>&copy; 2019</p>
     </footer>
+    <script src="drawBulletBill.js"></script>
+    <script src="drawMysteryBox.js"></script>
+    <script src="drawSans.js"></script>
+    <script src="ruler.js"></script>
     <script>
         var canvas;
         var ctx;
-        const UNIT = 5;
+        const UNIT = 10;
         window.onload = init;
         function init() {
             canvas = document.getElementById("myCanvas");
             ctx = canvas.getContext("2d");
+            // Draw square
+            drawCharacters();
+
+        }
+        function drawCharacters() {
+            drawBulletBill(20,30,2);
+            drawMysteryBox(0,0,1);
+            drawSans(55,10,2);
             }
-        </script>
+
+        function drawBackground() {
+
+            }
+    </script>
 </body>
 
 </html>
