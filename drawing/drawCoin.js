@@ -1,5 +1,9 @@
-function drawCoin() {
+function drawCoin(x,y,scale) {
+    ctx.save();
+    ctx.translate(x*UNIT,y*UNIT);
+    ctx.scale(scale,scale);
     drawBody();
+    ctx.restore();
 }
 
 function drawBody() {
