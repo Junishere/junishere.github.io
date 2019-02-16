@@ -3,8 +3,8 @@ function drawGrounds() {
 }
 
 function drawGround() {
-    ctx.fillStyle = "brown";
-    ctx.fillRect(0,130*UNIT,200*UNIT,10*UNIT);
-    ctx.fillStyle = "green"
+    ctx.fillStyle = "green";
     ctx.fillRect(0,129*UNIT,200*UNIT,10*UNIT);
+    ctx.fillStyle = "brown"
+    ctx.fillRect(0,133*UNIT,200*UNIT,10*UNIT);
 }
