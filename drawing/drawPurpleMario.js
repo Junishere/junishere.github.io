@@ -1,12 +1,12 @@
-function drawPurpleMario1() {
+function drawPurpleMariobody1() {
 
 }
 
-function drawPurpleMario2() {
+function drawPurpleMariobody2() {
     
 }
 
-function drawPurpleMario3() {
+function drawPurpleMariobody3() {
     
 }
 
@@ -14,7 +14,9 @@ function drawPurpleMario3() {
 
 
 function drawPurpleMarioHead1() {
-
+    
+    ctx.fillStyle = "purple";
+    ctx.fillRect(3*UNIT,0,6*UNIT,1*UNIT);
 }
 
 function drawPurpleMarioHead2() {

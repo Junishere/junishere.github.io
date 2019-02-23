@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PUrPlE MaRio</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Purple Mario</h1>
+        <a href="./drawing.html">Go Back</a>
+
+    </header>
+    <nav>
+
+    </nav>
+    <section>
+        <canvas id="myCanvas" width="1000" height="700"></canvas>
+    </section>
+    <footer>
+        <p>&copy; 2019</p>
+    </footer>
+        <script>
+            var canvas;
+            var ctx;
+            const UNIT = 5;
+            window.onload = init;
+            function init() {
+                canvas = document.getElementById("myCanvas");
+                ctx = canvas.getContext("2d");
+                // drawBricks();
+                drawPurpleMario();
+        }
+        </script>
+    <script src="drawPurpleMario.js"></script>
+    <script src="ruler.js"></script>
+</body>
+
+</html>
