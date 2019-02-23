@@ -20,7 +20,7 @@ function drawPurpleMarioHead1() {
     ctx.fillRect(3*UNIT,0,6*UNIT,1*UNIT);
     ctx.fillRect(2*UNIT,1,UNIT,11*UNIT,1*UNIT);
     
-    ctx.fillStyle = "#C66426"
+    ctx.fillStyle = "#C66426";
 
     ctx.fillRect(2*UNIT,2*UNIT,3*UNIt,1*UNIT);
     ctx.fillRect(7*UNIT,2*UNIT,1*UNIt,2*UNIT);
@@ -30,6 +30,17 @@ function drawPurpleMarioHead1() {
     ctx.fillRect(4*UNIT,4*UNIT,1*UNIt,1*UNIT);
     ctx.fillRect(8*UNIT,4*UNIT,1*UNIt,1*UNIT);
     ctx.fillRect(7*UNIT,5*UNIT,4*UNIt,1*UNIT);
+
+    ctx.fillStyle = "#F39258";
+
+    ctx.fillRect(5*UNIT,2*UNIT,2*UNIT,1*UNIT);
+    ctx.fillRect(8*UNIT,2*UNIT,1*UNIT,1*UNIT);
+    ctx.fillRect(2*UNIT,3*UNIT,1*UNIT,2*UNIT);
+    ctx.fillRect(4*UNIT,3*UNIT,3*UNIT,1*UNIT);
+    ctx.fillRect(8*UNIT,3*UNIT,3*UNIT,1*UNIT);
+    ctx.fillRect(9*UNIT,4*UNIT,3*UNIT,1*UNIT);
+    ctx.fillRect(3*UNIT,5*UNIT,4*UNIT,2*UNIT);
+    ctx.fillRect(7*UNIT,6*UNIT,3*UNIT,1*UNIT);
 
 }
 
