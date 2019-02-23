@@ -24,14 +24,16 @@
         <script>
             var canvas;
             var ctx;
-            const UNIT = 5;
+            const UNIT = 20;
             window.onload = init;
             function init() {
                 canvas = document.getElementById("myCanvas");
                 ctx = canvas.getContext("2d");
                 
-                drawPurpleMario();
-                drawruler(5);
+                drawPurpleMario1(3,3);
+                drawPurpleMario2(18,3);
+                drawPurpleMario3(36,3);
+                drawRuler(5);
         }
         </script>
     <script src="drawPurpleMario.js"></script>
