@@ -16,6 +16,7 @@ function drawPurpleMariobody3() {
 function drawPurpleMarioHead1() {
     
     ctx.fillStyle = "purple";
+    
     ctx.fillRect(3*UNIT,0,6*UNIT,1*UNIT);
 }
 
