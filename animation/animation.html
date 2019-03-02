@@ -20,7 +20,34 @@
             <p>&copy; 2019</p>
         </footer>
         <script>
- 
+            var canvas;
+            var ctx;
+            var requestId;
+            var positionX = 0;
+            const UNIT = 10;
+            window.onload = init;
+            function init() {
+                canvas = document.getElementById("myCanvas");
+                ctx = canvas.getContext("2d");
+
+                startAnimation();
+            }
+            function startAnimation() {
+                requestId = requestAnimationFrame(animationLoop);
+            }
+            function animationLoop(timeStamp) {
+                // First line inside animationLoop
+                ctx.clearRect(0,0,canvas.width,canvas.height);
+                // ctx.fillRect(positionX,0,5*UNIT,5*UNIT);
+                drawSans(positionX,0);
+                changePositionX();
+                // Last line inside animationLoop
+                requestId = requestAnimationFrame(animationLoop);
+            }
+            function changePositionX() {
+                positionX += (positionX) +=0.0001
+            }
         </script>
+        <script src="../drawing/drawSans.js"></script>
     </body>
 </html>
