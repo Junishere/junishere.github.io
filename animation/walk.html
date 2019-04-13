@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Walk</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Walk</h1>
+    </header>
+    <nav>
+        <a href="../drawing/drawing.html">go back</a>
+        <br>
+        <a href="animation.html">Animation</a>
+    </nav>
+    <section>
+        <canvas id="myCanvas" width="1400" height="700"></canvas>
+    </section>
+    <footer>
+        <p>&copy; 2019</p>
+    </footer>
+    <script>
+        var canvas;
+        var ctx;
+        var requestId;
+        var positionX = -12;
+        var time = 0;
+        const MAX_TIME = 20;
+        const UNIT = 5;
+        window.onload = init;
+        function init() {
+            canvas = document.getElementById("myCanvas");
+            ctx = canvas.getContext("2d");
+
+            startAnimation();
+
+
+        }
+        function startAnimation() {
+            requestId = requestAnimationFrame(animationLoop);
+        }
+        function animationLoop(timeStamp) {
+            // First line inside animationLoop
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawbackground();
+            animatePurpleMario();
+            changePositionX();  
+            changeTime();          
+            requestId = requestAnimationFrame(animationLoop);
+
+        }
+        function drawbackground() {
+            ctx.fillStyle = "yellow";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            drawGrounds(0, 111, 10);
+        }
+        function animatePurpleMario() {
+                if (0 <= time && time <= 9) {
+                    drawPurpleMario2(positionX,95);
+                } else if (10 <= time && time <= 19) {
+                    drawPurpleMario3(positionX,95);
+                }
+        }
+
+        function changePositionX() {
+            if (positionX >= canvas.width/UNIT) {
+                positionX = -12;
+            } else {
+                positionX += 1.1;
+            }
+        }
+        
+        function changeTime() {
+            if (time == MAX_TIME) {
+                time = 0;
+            } else {
+                time += 1;
+            }
+        }
+
+    </script>
+    <script src="../drawing/drawGrounds.js"></script>
+    <script src="../drawing/drawPurpleMario.js"></script>
+</body>
+
+</html>
