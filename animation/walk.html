@@ -46,6 +46,7 @@
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             drawbackground();
             animatePurpleMario();
+            animateBulletBill();
             changePositionX();  
             changeTime();          
             requestId = requestAnimationFrame(animationLoop);
@@ -63,6 +64,14 @@
                     drawPurpleMario3(positionX,95);
                 }
         }
+        
+        function animateBulletBill() {
+            if (0 <= time && time <= 9) {
+                drawBulletBill(positionX,40); 
+            }
+        }
+        
+
 
         function changePositionX() {
             if (positionX >= canvas.width/UNIT) {
@@ -83,6 +92,7 @@
     </script>
     <script src="../drawing/drawGrounds.js"></script>
     <script src="../drawing/drawPurpleMario.js"></script>
+    <script src="../drawing/drawBulletBill.js"></script>
 </body>
 
 </html>
