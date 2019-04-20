@@ -26,6 +26,7 @@
         var ctx;
         var requestId;
         var positionX = -12;
+        var positionXBulletBill = 290;
         var time = 0;
         const MAX_TIME = 20;
         const UNIT = 5;
@@ -48,7 +49,8 @@
             animatePurpleMario();
             animateBulletBill();
             changePositionX();  
-            changeTime();          
+            changepositionXBulletBill();
+            changeTime();         
             requestId = requestAnimationFrame(animationLoop);
 
         }
@@ -60,14 +62,17 @@
         function animatePurpleMario() {
                 if (0 <= time && time <= 9) {
                     drawPurpleMario2(positionX,95);
-                } else if (10 <= time && time <= 19) {
+                } else if (10 <= time && time <= 20) {
                     drawPurpleMario3(positionX,95);
                 }
         }
         
         function animateBulletBill() {
-            if (0 <= time && time <= 9) {
-                drawBulletBill(positionX,40); 
+                                  {
+                ctx.save();
+                ctx.scale(-1,1);
+                drawBulletBill(-positionXBulletBill,40); 
+                ctx.restore();
             }
         }
         
@@ -77,9 +82,18 @@
             if (positionX >= canvas.width/UNIT) {
                 positionX = -12;
             } else {
-                positionX += 1.1;
+                positionX += 1.2;
             }
         }
+
+        function changepositionXBulletBill() {
+            if (positionXBulletBill <= 0) {
+                positionXBulletBill = 290;
+            } else {
+                positionXBulletBill -= 1.1;
+            }
+        }
+        
         
         function changeTime() {
             if (time == MAX_TIME) {
