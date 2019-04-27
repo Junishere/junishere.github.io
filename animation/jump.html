@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>slide</title>
+        <title>Jumps</title>
         <link rel="stylesheet" href="../style.css">
     </head>
     <body>
         <header>
-            <h1>Slide</h1>
+            <h1>Jump</h1>
         </header>
         <nav>
             <a href="../animation/animation.html">go back</a>
@@ -24,9 +24,13 @@
             var canvas;
             var ctx;
             var requestId;
-            var BulletBillPositionX = 0;
-            var isFacingRight = true
+            var positionX = 0;
+            var positionY = 68;
+            var isJumping = false;
             const UNIT = 7;
+            const JUMP_LOCATION = 50;
+            const PEAK_LOCATION = 80;
+            const LAND_LOCATION = 110;
             window.onload = init;
             function init() {
                 canvas = document.getElementById("myCanvas");
@@ -43,48 +47,53 @@
             // First line inside animationLoop
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             drawbackground();
-            animateBulletBill();
-            changePositionX();
             drawBricks();
+            changePositionX();
+            changePositionY();
+            animatePurpleMario();
             requestId = requestAnimationFrame(animationLoop);
 
         }
         function drawbackground() {
-            ctx.fillStyle = "red";
+            ctx.fillStyle = "blue";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
             drawBricks(0, 84, 14);
-        }
 
-        function animateBulletBill() {
-            if (isFacingRight == true) {
-                drawBulletBill(BulletBillPositionX, 40,1);
-            } else if (isFacingRight == false) {
-                ctx.save();
-                ctx.scale(-1,1);
-                animateBulletBill(-BulletBillPositionX,40,1);
-                ctx.restore();
-            }
-        }
-
-        function changePositionX() {
-            if (positionX > canvas.width/UNIT) {
-                positionX = -12;
-            } else {
-                positionX += 1.2;
-            }
-        }
-
-        function changeisFacingRight() {
-            if (changePositionX > canvas.width / UNIT+4*UNIT)  {
-                isFacingRight = false;
-            } else if (BulletBillPositionX <0*UNIT) {
-                isFacingRight = true;
-            }
         }
         
+        
+        function changePositionX() {
+            if (positionX > canvas.width/UNIT) {
+                positionX = -12
+            } else {
+                positionX += 1;
+            }
+        }
+
+        function animatePurpleMario() {
+            if (isJumping == true) {
+                drawPurpleMario2(positionX,positionY);
+            } else {
+                drawPurpleMario1(positionX,positionY);
+            }
+        }
+
+        function changePositionY() {
+            if ((JUMP_LOCATION <= positionX) && (positionX < PEAK_LOCATION)) {
+                positionY /= 1.1;
+                isJumping = true;
+            } else if ((PEAK_LOCATION <= positionX) && (positionX < LAND_LOCATION)) {
+                    positionY *= 1.1;
+                isJumping = true;
+            } else { 
+                isJumping = false;
+            }
+        }
+    
+
         </script>
         <script src="../drawing/drawBricks.js"></script>
-        <script src="../drawing/drawBulletBill.js"></script>
+        <script src="../drawing/drawPurpleMario.js"></script>
     </body>
 
 </html>
