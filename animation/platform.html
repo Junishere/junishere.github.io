@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Platform</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Platform</h1>
+    </header>
+    <nav>
+        <a href="../animation/animation.html">go back</a>
+        <br>
+
+        <a href="animation.html">Animation</a>
+    </nav>
+    <section>
+        <canvas id="myCanvas" width="1400" height="700"></canvas>
+    </section>
+    <footer>
+        <p>&copy; 2019</p>
+    </footer>
+</body>
+<script>
+    var canvas;
+    var ctx;
+    var requestId;
+    var positionX = 0;
+    var positionY = 85;
+    const UNIT = 6;
+    const JUMP_POSITION1 = 30;
+    const PEAK_POSITION1 = 50;
+    const LAND_POSITION1 = 60;
+    const JUMP_POSITION2 = 140;
+    const PEAK_POSITION2 = 170;
+    const LAND_POSITION2 = 200;
+    const ACCELERATION = 1.075;
+    window.onload = init;
+    function init() {
+        canvas = document.getElementById("myCanvas");
+        ctx = canvas.getContext("2d");
+
+        startAnimation();
+    }
+    function startAnimation() {
+        requestId = requestAnimationFrame(animationLoop);
+    }
+    function animationLoop(timeStamp) {
+        // First line inside animationLoop
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // ctx.fillRect(positionX,0,5*UNIT,5*UNIT);
+        drawBackground();
+        drawPurpleMario1(positionX, positionY);
+        changePositionX();
+        changePositionY();
+        drawRuler(10);
+        // Last line inside animationLoop
+        requestId = requestAnimationFrame(animationLoop);
+    }
+
+    function drawBackground() {
+        ctx.fillStyle = "turquoise";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        drawBricks(0, 101, 15);
+        drawBricks(70, 53, 5);
+    }
+
+    function changePositionX() {
+        if (positionX > canvas.width / UNIT) {
+            positionX = -16;
+        } else {
+            positionX += 1;
+        }
+    }
+
+    function changePositionY() {
+        if (JUMP_POSITION1 <= positionX && positionX < PEAK_POSITION1) {
+            positionY /= ACCELERATION
+        } else if (PEAK_POSITION1 <= positionX && positionX < LAND_POSITION1) {
+            positionY *= ACCELERATION
+        }
+            
+    }
+</script>
+<script src="../drawing/drawBricks.js"></script>
+<script src="../drawing/drawPurpleMario.js"></script>
+<script src="../drawing/ruler.js"></script>
+
+</html>
