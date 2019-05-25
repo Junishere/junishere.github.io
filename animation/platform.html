@@ -35,7 +35,7 @@
     const LAND_POSITION1 = 60;
     const JUMP_POSITION2 = 140;
     const PEAK_POSITION2 = 170;
-    const LAND_POSITION2 = 200;
+    const LAND_POSITION2 = 209;
     const ACCELERATION = 1.075;
     window.onload = init;
     function init() {
@@ -64,14 +64,14 @@
         ctx.fillStyle = "turquoise";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         drawBricks(0, 101, 15);
-        drawBricks(70, 53, 5);
+        drawBricks(70, 54, 5);
     }
 
     function changePositionX() {
         if (positionX > canvas.width / UNIT) {
             positionX = -16;
         } else {
-            positionX += 1;
+            positionX += 0.8552;
         }
     }
 
@@ -81,8 +81,15 @@
         } else if (PEAK_POSITION1 <= positionX && positionX < LAND_POSITION1) {
             positionY *= ACCELERATION
         }
-            
+
+        if (JUMP_POSITION2 <= positionX && positionX < PEAK_POSITION2) {
+            positionY /= ACCELERATION
+        } else if (PEAK_POSITION2 <= positionX && positionX < LAND_POSITION2) {
+            positionY *= ACCELERATION
+        }
     }
+
+
 </script>
 <script src="../drawing/drawBricks.js"></script>
 <script src="../drawing/drawPurpleMario.js"></script>
