@@ -34,8 +34,8 @@
     const PEAK_POSITION1 = 50;
     const LAND_POSITION1 = 60;
     const JUMP_POSITION2 = 140;
-    const PEAK_POSITION2 = 170;
-    const LAND_POSITION2 = 209;
+    const PEAK_POSITION2 = 169;
+    const LAND_POSITION2 = 207;
     const ACCELERATION = 1.075;
     window.onload = init;
     function init() {
@@ -72,7 +72,7 @@
             positionX = -16;
         } else {
             positionX += 0.8552;
-        }
+        } 
     }
 
     function changePositionY() {
@@ -80,13 +80,13 @@
             positionY /= ACCELERATION
         } else if (PEAK_POSITION1 <= positionX && positionX < LAND_POSITION1) {
             positionY *= ACCELERATION
-        }
-
+        } 
+        
         if (JUMP_POSITION2 <= positionX && positionX < PEAK_POSITION2) {
             positionY /= ACCELERATION
         } else if (PEAK_POSITION2 <= positionX && positionX < LAND_POSITION2) {
-            positionY *= ACCELERATION
-        }
+            positionY *= ACCELERATION 
+        } 
     }
 
 

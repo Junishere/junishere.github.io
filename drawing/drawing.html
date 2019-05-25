@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Drawing</title>
-        <link rel="stylesheet" href="../style.css">
-    </head>
-    <body>
-        <header>
-            <h1>Drawing</h1>
-            <a href="../index.html">Back home</a>
-            <br>
-            <a href="bulletbill.html">Bulletbill</a>
-            <br>
-            <a href="mysterybox.html">Mysterybox</a>
-            <br>
-            <a href="sans.html">Sans</a>
-            <br>
-            <a href="translation.html">Translation Page</a>
-            <br>
-            <a href="scale.html">Scale</a>
-            <br>
-            <a href="Bricks.html">Bricks</a>
-            <br>
-            <a href="background.html">Background</a>
-            <br>
-            <a href="grounds.html">Ground</a>
-            <br>
-            <a href="purplemario.html">Purple Mario</a>
-        </header>
-        <nav>
 
-        </nav>
-        <section>
-            <canvas id="myCanvas" width="1000" height="700"></canvas>
-        </section>
-        <footer>
-            <p>&copy; 2019</p>
-        </footer>
-        <script>
-            var canvas;
-            var ctx;
-            var UNIT =15;
+<head>
+    <title>Drawing</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
 
-window.onload = init;
+<body>
+    <header>
+        <h1>Drawing</h1>
+        <a href="../index.html">Back home</a>
+        <br>
+        <a href="bulletbill.html">Bulletbill</a>
+        <br>
+        <a href="mysterybox.html">Mysterybox</a>
+        <br>
+        <a href="sans.html">Sans</a>
+        <br>
+        <a href="translation.html">Translation Page</a>
+        <br>
+        <a href="scale.html">Scale</a>
+        <br>
+        <a href="Bricks.html">Bricks</a>
+        <br>
+        <a href="background.html">Background</a>
+        <br>
+        <a href="grounds.html">Ground</a>
+        <br>
+        <a href="purplemario.html">Purple Mario</a>
+    </header>
+    <nav>
 
-function init() {
-    canvas = document.getElementById("myCanvas");
-    ctx = canvas.getContext("2d");
-    
-    drawCoin();
-    drawRuler(5);
-}
-        </script>
-        <script src="drawing.js"></script>
-        <script src="drawCoin.js"></script>
-        <script src="ruler.js"></script>
-    </body>
+    </nav>
+    <section>
+        <canvas id="myCanvas" width="1000" height="700"></canvas>
+    </section>
+    <footer>
+        <p>&copy; 2019</p>
+    </footer>
+    <script>
+        var canvas;
+        var ctx;
+        var UNIT = 15;
+
+        window.onload = init;
+
+        function init() {
+            canvas = document.getElementById("myCanvas");
+            ctx = canvas.getContext("2d");
+
+            drawPacman(0,0,2);
+            drawRuler(5);
+        }
+    </script>
+    <script src="drawing.js"></script>
+    <script src="drawPacman.js"></script>
+    <script src="ruler.js"></script>
+</body>
+
 </html>
