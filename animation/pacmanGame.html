@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pacman and Ghost</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Pacman & Ghost</h1>
+    </header>
+    <nav>
+        <a href="../animation/animation.html">go back</a>
+        <br>
+
+        <a href="animation.html">Animation</a>
+    </nav>
+    <section>
+        <canvas id="myCanvas" width="1400" height="700"></canvas>
+    </section>
+    <footer>
+        <p>&copy; 2019</p>
+    </footer>
+    <script>
+        var canvas;
+        var ctx;
+        var requestId;
+        var time = 0; 
+        var positionXGhost = 0;
+        var positionXPacman = 30;
+        const ACCELERATION = 1.075;
+        const MAX_TIME = 20;
+        const UNIT = 10;
+        window.onload = init;
+        function init() {
+            canvas = document.getElementById("myCanvas");
+            ctx = canvas.getContext("2d");
+            startAnimation();
+
+        }
+        function startAnimation() {
+            requestId = requestAnimationFrame(animationLoop);
+        }
+        function animationLoop(timeStamp) {
+            // First line inside animationLoop
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawbackground();
+            drawGhost(positionXGhost, 30, 1);
+            changePositionXPacman();
+            changePositionXGhost();
+            animatePacman();
+            animateGhost();
+            changeTime();
+            requestId = requestAnimationFrame(animationLoop);
+
+        }
+        function drawbackground() {
+            ctx.fillStyle = "black";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        }
+
+        function changePositionXPacman() {
+            if (positionXPacman > canvas.width/UNIT) {
+                positionXPacman = -10;
+            } else {
+                positionXPacman += 1;
+            }
+        }
+        
+        function changeTime() {
+            if (time >= MAX_TIME) {
+                time = 0;
+            } else {
+                time += 1;
+            }
+        }
+
+
+        function changePositionXGhost() {
+            if (positionXGhost > canvas.width/UNIT) {
+                positionXGhost = -12
+            } else {
+                positionXGhost += 1;
+            }
+        }
+
+        function animatePacman() {
+            if (0 <= time && time < MAX_TIME/2) {
+                drawPacman(positionXPacman,30,1);
+            } else if (MAX_TIME/2 <= time && time <= MAX_TIME) {
+                drawPacman(positionXPacman,30,2);
+            }
+        }
+
+        function animateGhost() {
+            if (0 <= time && time < MAX_TIME/2) {
+                drawGhost(positionXGhost,30,1);
+            } else if (MAX_TIME/2 <= time && time <= MAX_TIME) {
+                drawGhost(positionXGhost,30,2);
+            }
+        }
+
+
+    </script>
+    <script src="../drawing/drawPacman.js"></script>
+    <script src="../drawing/drawGhost.js"></script>
+</body>
+
+</html>

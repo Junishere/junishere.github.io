@@ -35,3 +35,13 @@ function drawPacman(x,y,frame) {
     
     
 }
+function drawPacmanDying(x,y,frame) {
+    // save
+    // translate
+    if (frame == 1) {
+
+    } else if (frame == 2) {
+
+    } // go all the way to the last frame
+    // restore
+}
