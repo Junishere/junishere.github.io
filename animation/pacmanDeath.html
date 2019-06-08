@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Pacman Death</title>
+    <title>Pacman died</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -45,14 +45,12 @@
             changePositionX();
             changeTime();
             animatePacman();
-            
             requestId = requestAnimationFrame(animationLoop); // Restarts the animation by running the animationLoop function again.
 
         }
         function drawbackground() {
             ctx.fillStyle = "black";
             ctx.fillRect(0, 0, canvas.width, canvas.height);
-
         }
 
         function changePositionX() {
