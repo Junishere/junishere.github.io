@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pacman Death</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Pacman Death</h1>
+    </header>
+    <nav>
+        <a href="../animation/animation.html">go back</a>
+        <br>
+
+        <a href="animation.html">Animation</a>
+    </nav>
+    <section>
+        <canvas id="myCanvas" width="1400" height="700"></canvas>
+    </section>
+    <footer>
+        <p>&copy; 2019</p>
+    </footer>
+    <script>
+        var canvas;
+        var ctx;
+        var requestId;
+        var time = 0;
+        var deathTime = 0;
+        var positionX = 0;
+        const MAX_TIME = 24;
+        const MAX_DEATH_TIME = 72;
+        const UNIT = 10;
+        window.onload = init; // When the website page is loaded, run the init function.
+        function init() { // Function: A set of instruction that can be run
+            canvas = document.getElementById("myCanvas"); // Linking html canvas to js canvas
+            ctx = canvas.getContext("2d"); // Setting the canvas to be 2D
+            requestId = requestAnimationFrame(animationLoop); // Starting the animation by running the animationLoop function
+        }
+        function animationLoop(timeStamp) {
+            // First line inside animationLoop
+            ctx.clearRect(0, 0, canvas.width, canvas.height); // Wipes the canvas clean.
+            drawbackground();
+            changePositionX();
+            changeTime();
+            animatePacman();
+            
+            requestId = requestAnimationFrame(animationLoop); // Restarts the animation by running the animationLoop function again.
+
+        }
+        function drawbackground() {
+            ctx.fillStyle = "black";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        }
+
+        function changePositionX() {
+            if (positionX > canvas.width / UNIT) {
+                positionX = -10;
+            } else {
+                positionX += 1;
+            }
+        }
+
+        function changeTime() {
+            if (time >= MAX_TIME) {
+                time = 0;
+            } else {
+                time += 1;
+            }
+        }
+
+        function startDeath() {
+            deathTime += 1;
+            positionX = (canvas.width/2) / UNIT;
+            if (0 <= deathTime && deathTime < MAX_DEATH_TIME / 12) {
+                drawPacmanDying(positionX, 29, 1);
+            } else if (MAX_DEATH_TIME / 12 <= deathTime && deathTime < 2 * MAX_DEATH_TIME / 12) {
+                drawPacmanDying(positionX, 29, 2);
+            } else if (2 *MAX_DEATH_TIME / 12 <= deathTime && deathTime < 3 * MAX_DEATH_TIME / 12) {
+                drawPacmanDying(positionX, 29, 3);
+            } else if (3*MAX_DEATH_TIME / 12 <= deathTime && deathTime < 4 * MAX_DEATH_TIME / 12) {
+                drawPacmanDying(positionX, 29, 4);
+            } else if (4*MAX_DEATH_TIME / 12 <= deathTime && deathTime < 5 * MAX_DEATH_TIME / 12) {
+                drawPacmanDying(positionX, 29, 5);
+            } else if (5*MAX_DEATH_TIME / 12 <= deathTime && deathTime < 6 * MAX_DEATH_TIME / 12) {
+                drawPacmanDying(positionX, 29, 6);
+            } else if (6*MAX_DEATH_TIME / 12 <= deathTime && deathTime < 7 * MAX_DEATH_TIME / 12) {
+                drawPacmanDying(positionX, 29, 7);
+            } else if (7*MAX_DEATH_TIME / 12 <= deathTime && deathTime < 8 * MAX_DEATH_TIME / 12) {
+                drawPacmanDying(positionX, 29, 8);
+            } else if (8*MAX_DEATH_TIME / 12 <= deathTime && deathTime < 9 * MAX_DEATH_TIME / 12) {
+                drawPacmanDying(positionX, 29, 9);
+            } else if (9*MAX_DEATH_TIME / 12 <= deathTime && deathTime < 10 * MAX_DEATH_TIME / 12) {
+                drawPacmanDying(positionX, 29, 10);
+            } else if (10*MAX_DEATH_TIME / 12 <= deathTime && deathTime < 11 * MAX_DEATH_TIME / 12) {
+                drawPacmanDying(positionX, 29, 11);
+            } else if (11*MAX_DEATH_TIME / 12 <= deathTime && deathTime < 12 * MAX_DEATH_TIME / 12) {
+                drawPacmanDying(positionX, 29, 12);
+            } else {
+                positionX = 0;
+                deathTime = 0;
+            }
+        }
+
+
+        function animatePacman() {
+            if (positionX > (canvas.width / 2) / UNIT) {
+                startDeath();
+            } else {
+                if (0 <= time && time < MAX_TIME / 2) {
+                    drawPacman(positionX, 30, 1);
+                } else if (MAX_TIME / 2 <= time && time <= MAX_TIME) {
+                    drawPacman(positionX, 30, 2);
+                }
+            }
+
+        }
+
+
+    </script>
+    <script src="../drawing/drawPacman.js"></script>
+    <script src="../drawing/drawGhost.js"></script>
+</body>
+
+</html>
