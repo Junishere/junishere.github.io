@@ -24,8 +24,8 @@
             var canvas;
             var ctx;
             var requestId;
-            var BulletBillPositionX = 0;
-            var isFacingRight = true
+            var positionXBulletBill = 290;
+            var positionX = -12;
             const UNIT = 7;
             window.onload = init;
             function init() {
@@ -44,8 +44,8 @@
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             drawbackground();
             animateBulletBill();
-            changePositionX();
-            changeisFacingRight();
+            drawBulletBill(positionXBulletBill,70);
+            changepositionXBulletBill();
             drawBricks();
             requestId = requestAnimationFrame(animationLoop);
 
@@ -57,29 +57,18 @@
         }
 
         function animateBulletBill() {
-            if (isFacingRight == true) {
-                drawBulletBill(BulletBillPositionX, 40,1);
-            } else if (isFacingRight == false) {
-                ctx.save();
-                ctx.scale(-1,1);
-                animateBulletBill(-BulletBillPositionX,40,1);
-                ctx.restore();
-            }
-        }
+            ctx.save();
+            ctx.scale(-1,1);
+            drawBulletBill(-positionX,70);
+            ctx.restore();
+        } 
 
-        function changePositionX() {
-            if (positionX > canvas.width/UNIT) {
-                positionX = -12;
+
+        function changepositionXBulletBill() {
+            if (positionXBulletBill <= -15) {
+                positionXBulletBill = 290;
             } else {
-                positionX += 1.2;
-            }
-        }
-
-        function changeisFacingRight() {
-            if (changePositionX > canvas.width / UNIT+4*UNIT)  {
-                isFacingRight = false;
-            } else if (BulletBillPositionX <0*UNIT) {
-                isFacingRight = true;
+                positionXBulletBill -= 1;
             }
         }
         
