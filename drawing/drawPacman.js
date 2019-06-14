@@ -62,9 +62,28 @@ function drawPacmanDying(x,y,frame) {
         ctx.fillRect(3*UNIT,10*UNIT,9*UNIT,1*UNIT);
         ctx.fillRect(5*UNIT,11*UNIT,5*UNIT,1*UNIT);
     } else if (frame == 3) {
-        ctx.fillRect(0,0,5*UNIT,3*UNIT);
+        ctx.fillRect(2*UNIT,4*UNIT,1*UNIT,1*UNIT);
+        ctx.fillRect(14*UNIT,4*UNIT,1*UNIT,1*UNIT);
+        ctx.fillRect(1*UNIT,5*UNIT,4*UNIT,1*UNIT);
+        ctx.fillRect(12*UNIT,5*UNIT,4*UNIT,1*UNIT);
+        ctx.fillRect(1*UNIT,6*UNIT,5*UNIT,1*UNIT);
+        ctx.fillRect(11*UNIT,6*UNIT,5*UNIT,1*UNIT);
+        ctx.fillRect(1*UNIT,7*UNIT,7*UNIT,1*UNIT);
+        ctx.fillRect(9*UNIT,7*UNIT,7*UNIT,1*UNIT);
+        ctx.fillRect(2*UNIT,8*UNIT,13*UNIT,2*UNIT);
+        ctx.fillRect(3*UNIT,10*UNIT,11*UNIT,1*UNIT);
+        ctx.fillRect(5*UNIT,11*UNIT,3*UNIT,1*UNIT);
+        ctx.fillRect(9*UNIT,11*UNIT,3*UNIT,1*UNIT);
     } else if (frame == 4) {
-        ctx.fillRect(0,0,5*UNIT,4*UNIT);
+        ctx.fillRect(1*UNIT,6*UNIT,3*UNIT,1*UNIT);
+        ctx.fillRect(13*UNIT,6*UNIT,3*UNIT,1*UNIT);
+        ctx.fillRect(1*UNIT,7*UNIT,6*UNIT,1*UNIT);
+        ctx.fillRect(10*UNIT,7*UNIT,6*UNIT,1*UNIT);
+        ctx.fillRect(1*UNIT,8*UNIT,15*UNIT,1*UNIT);
+        ctx.fillRect(2*UNIT,9*UNIT,13*UNIT,1*UNIT);
+        ctx.fillRect(3*UNIT,10*UNIT,11*UNIT,1*UNIT);
+        ctx.fillRect(5*UNIT,11*UNIT,3*UNIT,1*UNIT);
+        ctx.fillRect(9*UNIT,11*UNIT,3*UNIT,1*UNIT);
     } else if (frame == 5) {
         ctx.fillRect(0,0,5*UNIT,5*UNIT);
     } else if (frame == 6) {
