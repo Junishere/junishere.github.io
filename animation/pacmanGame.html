@@ -31,15 +31,15 @@
         var positionXPacman = 30;
         const MAX_TIME = 24;
         const UNIT = 10;
-        window.onload = init; // When the website page is loaded, run the init function.
-        function init() { // Function: A set of instruction that can be run
-            canvas = document.getElementById("myCanvas"); // Linking html canvas to js canvas
-            ctx = canvas.getContext("2d"); // Setting the canvas to be 2D
-            requestId = requestAnimationFrame(animationLoop); // Starting the animation by running the animationLoop function
+        window.onload = init; 
+        function init() { 
+            canvas = document.getElementById("myCanvas"); 
+            ctx = canvas.getContext("2d"); 
+            requestId = requestAnimationFrame(animationLoop); 
         }
         function animationLoop(timeStamp) {
             // First line inside animationLoop
-            ctx.clearRect(0, 0, canvas.width, canvas.height); // Wipes the canvas clean.
+            ctx.clearRect(0, 0, canvas.width, canvas.height); 
             drawbackground();
             drawGhost(positionXGhost, 30, 1);
             changePositionXPacman();
@@ -47,7 +47,7 @@
             animatePacman();
             animateGhost();
             changeTime();
-            requestId = requestAnimationFrame(animationLoop); // Restarts the animation by running the animationLoop function again.
+            requestId = requestAnimationFrame(animationLoop); 
 
         }
         function drawbackground() {
