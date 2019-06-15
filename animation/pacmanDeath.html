@@ -45,6 +45,7 @@
             changePositionX();
             changeTime();
             animatePacman();
+            drawGhost();
             requestId = requestAnimationFrame(animationLoop); // Restarts the animation by running the animationLoop function again.
 
         }
@@ -94,6 +95,10 @@
                 drawPacmanDying(positionX, 29, 10);
             } else if (10*MAX_DEATH_TIME / 12 <= deathTime && deathTime < 11 * MAX_DEATH_TIME / 12) {
                 drawPacmanDying(positionX, 29, 11);
+            } else if (11*MAX_DEATH_TIME / 12 <= deathTime && deathTime < 12 * MAX_DEATH_TIME / 12) {
+                drawPacmanDying(positionX, 29, 12);
+            } else if (11*MAX_DEATH_TIME / 12 <= deathTime && deathTime < 12 * MAX_DEATH_TIME / 12) {
+                drawPacmanDying(positionX, 29, 12);
             } else if (11*MAX_DEATH_TIME / 12 <= deathTime && deathTime < 12 * MAX_DEATH_TIME / 12) {
                 drawPacmanDying(positionX, 29, 12);
             } else {
