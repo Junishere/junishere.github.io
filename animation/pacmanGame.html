@@ -38,7 +38,6 @@
             requestId = requestAnimationFrame(animationLoop); 
         }
         function animationLoop(timeStamp) {
-            // First line inside animationLoop
             ctx.clearRect(0, 0, canvas.width, canvas.height); 
             drawbackground();
             drawGhost(positionXGhost, 30, 1);
