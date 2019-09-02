@@ -27,7 +27,7 @@ p {
     color: rgba(21, 153, 177, 0.781);
 }
 body {
-    background-color: rgba(224, 184, 131, 0.61);
+    background-color: rgba(179, 228, 43, 0.918);
 }
 a:link,
 a:visited {
@@ -35,7 +35,7 @@ a:visited {
     color: brown;
 }
 a:hover {
-    background-color: rgba(224, 184, 131, 0.63);
+    background-color:  rgba(139, 175, 41, 0.829);
 }
 #myCanvas {
     border-style: solid;
