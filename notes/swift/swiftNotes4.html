@@ -7,28 +7,105 @@
         <header>
         <h1>Swift Notes 4 Unit 2.1</h1>
         <a href="../../notes/notes.html">Go Back</a>
+        
         <h2>Concatenation and Interpolation</h2>
         <p>The "+" operator can combine not only the numbers, but also words like "Hello" or "Hello World"</p>
-        <p>Example:</p>
-        <p>Var myString = "Hello"</p>
-        <p>myString = myString + ", World"</p>
+            Example:
+            <br>
+            Var myString = "Hello"
+            <br>
+            myString = myString + ", World"</p>
+
+            <p>The value of the Constant and Variable into String can be used by putting backslash "\" and parentheses around the constant or variable "()"</p>
+            Second Example:
+            <br>
+            let name = "Cal"
+            <br>
+            let item = "hammer"
+            <br>
+            print("\(name) found a \(item) in the garage")
+            <br>
+            <br>
+            let number1 = 20
+            <br>
+            let number2 = 30
+            <br>
+            print("if number1 is \(number1) and number2 is \(number2), then number1 + number2 equals 50")
+
+        
         <h2>String Equality and Comparison</h2>
         <p>Using the "==" operator checks for identical characters in the same order</p>
-        <p>Example:</p>
-        <p>let month = "January"</p>
-        <p>let otherMonth = "January"</p>
+        <p>Also, we can use the "!=" operator to say they are not the same</p>
+            
+            Example:
+            <br>
+            let month = "January"
+            <br>
+            let otherMonth = "January"</p>
+
+            if month == otherMonth
+            <br>
+            print("They are the same")
         <br>
-        <p>if month == otherMonth</p>
-        <p>print("They are the same")</p> 
         <br>
-        <p>if month != otherMonth</p>
-        <p>print("They are not the same"</p>
+            if month != otherMonth
+            <br>
+            print("They are not the same")</p>
+            <br>
+            Second Example:
+            <br>
+            let lowercaseLetters = "john cena"
+            <br>
+            let capitalLetters = "John Cena"
+            <br>
+            <br>
+            if lowercaseLetters != capitalLetters {
+            <br>
+                print("They are not the same")
+            }
+            <br>
+            <p>This example can use the ".lowercased()" method to compare the two constants or variables</p>
+            Third Example:
+            <br>
+            let item = "Bommerang"
+            <br>
+            if item.lowercased() == "boomerang".lowercased() {
+            <br>
+                print("The two names are equal")
+            }
+            <br>
+            <p>Instead of the "==" operator we can use the "hasPrefix(_:)" or the "hasSuffix(_:)" to match the beginning or ending of the String</p>
+            <br>
+            Fourth Example:
+            <br>
+            let introduction = "What's, up"
+            <br>
+            print(introduction.hasPrefix("What's"))
+            <br>
+            print(introduction.hasSuffix(", up"))
+            <br>
+            <br>
+            <p>Another example we can also use is the ".contains(_:)" method</p>
+            <br>
+            Fith Example:
+            <br>
+            let greeting = "How's it going there, I'm Bob"
+            <br>
+            <br>
+            if greeting.contains("How's it going") {
+            <br>
+            print("Making a conversation") 
+            }
+
+
         <h2>Escape Characters</h2>
         <p>Double quote: \"</p>
         <p>Single quote: \'</p>
         <p>Backslash: //</p>
         <p>Tab: \t</p>
         <p>Carriage return(return to beginning of the line): \r</p>
+
+
         </header>
     </body>
-</html> 
+</html>  
