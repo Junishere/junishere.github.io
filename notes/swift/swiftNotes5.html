@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel= "stylesheet" href="../../style.css">
+</head>
+    <body>
+        <header>
+        <h1>Swift Notes 5 Unit 2.2</h1>
+        <a href="../../notes/notes.html">Go Back</a>
+        <h2>Defining Function</h2>
+        <p>It's similar to the let, constant or var, variable, however the func keyword tells the Swiftcomplier it's a function</p>
+        <p>If this function has a return value, you'll write an arrow (->), this follows by the type of data the function returns such as Int, String, etc</p>
+            <br>
+            Example:
+            <br>
+        func functionName (parameters) -> ReturnType {
+            <br>
+            //body of function
+            <br>
+        }
+        <p>Then you can use the parameters to specify like a list when the function is called</p>
+            <br>
+            Example 2:
+            <br>
+        makeDinner(food: ["steak", "wine"])
+        <br>
+        makeDinner(food: ["salad", "mashpotatoes"])
+        <br>
+        <br>
+        <p>Another way we can use the function is by explaining ten digit numbers of pi, we don't need to put a return value for this</p>
+        <br>
+        Example 3:
+        func displayPi () {
+        <br>
+            print("3.1415926535")
+        <br>
+        }
+        <br>
+        <p>Once the funtion has been called it can be declared anywhere just by writing the name</p>
+        <br>
+        displayPi()
+        <br>
+        - Console Output:
+        <br>
+        3.1415926535
+        <br>
+        <br>
+        <h2>Parameters</h2>
+        <p>To specify a function with a parameter, insert a name for the value, a colon</p>
+        <br>
+        Example 4:
+        <br>
+        func triple(value: Int) {
+        <br>
+            let result = value * 3
+        <br>
+            print("if you multiply \(value) by 10, you'll get \(result).")
+        <br>
+        }
+        <br>
+        <p>In the case above, value is a constant that can be used within the function.</p>
+        <br>
+        triple(value: 20)
+        <br>
+        "if you multiply 20 by 3, you'll get 60."
+        <br>
+        <p>Then to pass multiple arguments to a function you'll need to seperate each parameter with a coma.</p>
+        <p>The following is an example of a function that takes in two Int parameters, multiply together and print the result.</p>
+        <br>
+        func multiply(firstNumber: Int, secondNumber: Int) {
+        <br>
+        let result = firstNumber * secondNumber
+        <br>
+            print("the result is \(result)")
+        <br>
+        }
+        <br>
+        <p>The function is then called liked this</p>
+        <br>
+        multiply(firstNumber: 5, secondNumber: 4)
+        <br>
+        the result is 20
+        <br>
+        <br>
+        <h2>Argument Labels</h2>
+        <p>So far, the label for each argument within a function has the same name intentionally as it does externally</p>
+        <p>In the example the firstName is used both within the function and when the function is called</p>
+        <br>
+        Example 5:
+        <br>
+        func introduceMyself(firstName: String) {
+        <br>
+        print("Hello,\(firstName)")
+        <br>
+        }
+        <br>
+        <br>
+        sayHello(firstName:"Branden")
+        <br>
+        <P>The argument labels to and and make the function read very clearly</P>
+        <br>
+        func sayHello(to: String, and: String) {
+        <br>
+            print("Hello \(to) and \(and)")
+        <br>
+        }
+        <br>
+        <p>If the function is cleanr without an argument label, it can be omit for example take the print function</p>
+        <br>
+        print("Hello there")
+        <p>The name of the function already makes it very clear that should be pass in a parameter</p>
+        <br>
+        <p>To omit the argument label, use _in place of the external name:</p>
+        <br>
+        func introduceFriend(_friend: String, _anotherFriend: String,) {
+        <br>
+            print("This is \(friend) and \(anotherFriend)")
+        <br>
+        }
+        <br>
+        <br>
+        introduceFriend("Cal, "Dennis")
+        <br>
+        <h2>Default Parameter Values</h2>
+        <br>
+        <p>Parameters allow the function to remain felxible, but often there's a value to use most of the time</p>
+        <p>As part of function definition the default value can be provided fro any parameter</p>
+        <br>
+        func display(videoGame: String, place: Int = 2) {
+        <br>
+            print("\(videoGame): \(place)")
+        <br>
+        }
+        <br>
+        <br>
+        display(videoGame: "MarioKart", place: 2) //"MarioKart: 2"
+        <br>
+        display(videoGame: "MarioKart") //"MarioKart: 2"
+        <br>
+        <br>
+        <h2>Return Values</h2>
+        <p>It's unlikely that the result should be printed before from multiply. Instead it might make more sense if the function simply returned the new value</p>
+        <br>
+        Example 6:
+        func multiply(firstNumber: Int, secondNumber: Int) -> Int
+        <br>
+        <P>In the example, you'll want to return result</P>
+        <br>
+        func multiply(firstNumber: Int, secondNumber: Int) -> Int {
+        <br>
+        let result = firstNumber * secondNumber
+        <br>
+        return result
+        <br>
+        }
+        <br>
+        
+
+
+
+        </header>
+    </body>
+</html>  
