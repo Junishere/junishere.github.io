@@ -10,26 +10,11 @@
         <h2>Defining Function</h2>
         <p>It's similar to the let, constant or var, variable, however the func keyword tells the Swiftcomplier it's a function</p>
         <p>If this function has a return value, you'll write an arrow (->), this follows by the type of data the function returns such as Int, String, etc</p>
-            <br>
-            Example:
-            <br>
-        func functionName (parameters) -> ReturnType {
-            <br>
-            //body of function
-            <br>
-        }
         <p>Then you can use the parameters to specify like a list when the function is called</p>
-            <br>
-            Example 2:
-            <br>
-        makeDinner(food: ["steak", "wine"])
-        <br>
-        makeDinner(food: ["salad", "mashpotatoes"])
-        <br>
-        <br>
         <p>Another way we can use the function is by explaining ten digit numbers of pi, we don't need to put a return value for this</p>
         <br>
-        Example 3:
+        Example 1:
+        <br>
         func displayPi () {
         <br>
             print("3.1415926535")
@@ -48,7 +33,7 @@
         <h2>Parameters</h2>
         <p>To specify a function with a parameter, insert a name for the value, a colon</p>
         <br>
-        Example 4:
+        Example 2:
         <br>
         func triple(value: Int) {
         <br>
@@ -86,7 +71,7 @@
         <p>So far, the label for each argument within a function has the same name intentionally as it does externally</p>
         <p>In the example the firstName is used both within the function and when the function is called</p>
         <br>
-        Example 5:
+        Example 3:
         <br>
         func introduceMyself(firstName: String) {
         <br>
@@ -141,7 +126,7 @@
         <h2>Return Values</h2>
         <p>It's unlikely that the result should be printed before from multiply. Instead it might make more sense if the function simply returned the new value</p>
         <br>
-        Example 6:
+        Example 4:
         func multiply(firstNumber: Int, secondNumber: Int) -> Int
         <br>
         <P>In the example, you'll want to return result</P>
