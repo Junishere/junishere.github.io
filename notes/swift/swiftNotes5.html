@@ -35,36 +35,36 @@
         <br>
         Example 2:
         <br>
-        func triple(value: Int) {
+        func addition(value: Int) {
         <br>
-            let result = value * 3
+            let result = value + 9
         <br>
-            print("if you multiply \(value) by 10, you'll get \(result).")
+            print("if you add \(value) by 1, you'll get \(result).")
         <br>
         }
         <br>
         <p>In the case above, value is a constant that can be used within the function.</p>
         <br>
-        triple(value: 20)
+        addition(value: 10)
         <br>
-        "if you multiply 20 by 3, you'll get 60."
+        "if you add 9 and 1, you'll get 10."
         <br>
-        <p>Then to pass multiple arguments to a function you'll need to seperate each parameter with a coma.</p>
+        <p>Then to pass multiple arguments to a function you'll need to seperate each parameter with a comma.</p>
         <p>The following is an example of a function that takes in two Int parameters, multiply together and print the result.</p>
         <br>
-        func multiply(firstNumber: Int, secondNumber: Int) {
+        func multiply(oddNumber: Int, evenNumber: Int) {
         <br>
-        let result = firstNumber * secondNumber
+        let answer = oddNumber * evenNumber
         <br>
-            print("the result is \(result)")
+            print("result equals to \(answer)")
         <br>
         }
         <br>
         <p>The function is then called liked this</p>
         <br>
-        multiply(firstNumber: 5, secondNumber: 4)
+        multiply(oddNumber: 24, evenNumber: 35)
         <br>
-        the result is 20
+        "the answer to this is 840"
         <br>
         <br>
         <h2>Argument Labels</h2>
@@ -84,20 +84,20 @@
         <br>
         <P>The argument labels to and and make the function read very clearly</P>
         <br>
-        func sayHello(to: String, and: String) {
+        func sayHi(brother: String, friend: String) {
         <br>
-            print("Hello \(to) and \(and)")
+            print("Hey \(brother) and \(friend)")
         <br>
         }
         <br>
-        <p>If the function is cleanr without an argument label, it can be omit for example take the print function</p>
+        <p>If the function is clearer without an argument label, it can be omit for example take the print function</p>
         <br>
         print("Hello there")
         <p>The name of the function already makes it very clear that should be pass in a parameter</p>
         <br>
         <p>To omit the argument label, use _in place of the external name:</p>
         <br>
-        func introduceFriend(_friend: String, _anotherFriend: String,) {
+        func introduceFriend(_  friend: String, _  anotherFriend: String,) {
         <br>
             print("This is \(friend) and \(anotherFriend)")
         <br>
@@ -118,24 +118,25 @@
         }
         <br>
         <br>
-        display(videoGame: "MarioKart", place: 2) //"MarioKart: 2"
+        display(videoGame: "PacMan", highScore: 400) //"PacMan: 400"
         <br>
-        display(videoGame: "MarioKart") //"MarioKart: 2"
+        display(videoGame: "PacMan") //"PacMan: 400"
         <br>
         <br>
         <h2>Return Values</h2>
         <p>It's unlikely that the result should be printed before from multiply. Instead it might make more sense if the function simply returned the new value</p>
         <br>
         Example 4:
-        func multiply(firstNumber: Int, secondNumber: Int) -> Int
+        <br>
+        func multiply(randomNumberGenerated: Int, anotherRandomNumberGenerated: Int) -> Int
         <br>
         <P>In the example, you'll want to return result</P>
         <br>
-        func multiply(firstNumber: Int, secondNumber: Int) -> Int {
+        func multiply(randomNumberGenerated: Int, anotherRandomNumberGenerated: Int) -> Int {
         <br>
-        let result = firstNumber * secondNumber
+        let numberGenerator = randomNumberGenerated * anotherRandomNumberGenerated
         <br>
-        return result
+        return numberGenerator
         <br>
         }
         <br>
