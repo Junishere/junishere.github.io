@@ -8,7 +8,6 @@
         <h1>Swift Notes 6 Unit 2.3</h1>
         <a href="../../notes/notes.html">Go Back</a>
         <h2>Structures</h2>
-        <br>
         <p>the word struct means that it is listing out the variables and constants declorations with the type of annotation</p>
         <p>this is used to define the properties and showing how to use a name property</p>
         <br>
@@ -20,6 +19,90 @@
         var realName: String
         <br>
         }
+        <br>
+        <P>Access data is stored in it's properties such as the person's realName using the dot syntax</P>
+        <br>
+        let gamer = gamerTag(realName: "Branden")
+        <br>
+        print(gamer.realName)
+        <br>
+        <br>
+        console output
+        <br>
+        <br>
+        Branden
+        <br>
+        <br>
+        <p>The second exapmle shown here is also using the dot syntax methodwith the structure</p>
+        <br>
+        struct personUserName {
+        <br>
+        var firstName: String
+        <br>
+        func introduceMyself {
+        <br>
+        print("Yo, my name is \(firstName)")
+        <br>
+        }
+        <br>
+        }
+        <p>Then it can be called by using the dot syntax</p>
+        <br>
+        let person = personUserName(firstName: "Branden")        
+        <br>
+        personUserName.introduceMyself()
+        <br>
+        <br>
+        console output
+        <br>
+        <br>
+        Yo, my name is Branden
+        <br>
+        <h2>Instances</h2>
+        <p>For this proccess the instance must be created which is initialization, and it inherits all properties and features of structure</p>
+        <br>
+        struct homework {
+        <br>
+        var math: math
+        <br>
+        var science: Science
+        <br>
+        var languages: languages
+        <br>
+        }
+        <br>
+        <br>
+        <p>Another example is by defining the attributes with the homework</p>
+        <p>Then there is the structure definition and it involves functonality being added which gives out a description of the instance values</p>
+        <br>
+        struct gamingComputer {
+        <br>
+        var brand: String
+        <br>
+        var GPU: String
+        <br>
+        var CPU: String
+        <br>
+        var storageNumber: Int
+        <br>
+        <br>
+        func aboutComputer {
+        <br>
+        print("The gaming spec are \(GPU), \(CPU), and has \(storageNumber) amount of storage.")
+        <br>
+        }
+        <br>
+        <br>
+        func playingComputer {
+        <br>
+        print("I'm running overwatch with the specs running with \(GPU), a \(CPU), and has \(storageNumber) gbs there.")
+        <br>
+        }
+        <br>
+        let firstGamingPC = gamingComputer(brand: "CyberPower", GPU: "RTX 2080", CPU: "intel core i9", storageNumber: "3000")
+        <br>
+        
+
         </header>
     </body>
 </html> 
