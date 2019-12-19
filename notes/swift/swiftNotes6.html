@@ -101,7 +101,117 @@
         <br>
         let firstGamingPC = gamingComputer(brand: "CyberPower", GPU: "RTX 2080", CPU: "intel core i9", storageNumber: "3000")
         <br>
-        
+        <h2>Initializars</h2>
+        <P>It's related to the function that uses return type, however it uses the init function and this makes it considered to be the default initializer</P>
+        <p>The initializers must have a default value like the string, double, and bool values</p>
+        <br>
+        var string = String.init() // ""
+        <br>
+        var double = Double.init() // 0.0
+        <br>
+        var bool = boolValue.init() // true
+        <br>
+        <p>The shortened version of the one below works the same way at the one above</p>
+        <br>
+        var string = String() // ""
+        <br>
+        var double = Double() // 0.0
+        <br>
+        var bool = boolValue() // true
+        <br>
+        <br>
+        <p>Using the default property values we can creata a state for each instance of the type</p>
+        <br>
+        <br>
+        struct newNumbers {
+        <br>
+        var generate: Double = 2.5
+        <br>
+        }
+        <br>
+        <br>
+        let newNumbers = Newnumbers()
+        <br>
+        print(newNumbers.generate)
+        <br>
+        <br>
+        <br>
+        console output
+        <br>
+        2.5
+        <br>
+        <h2>Custom initializer</h2>
+        <p>Customize the initialization process by defining the our own initializer</p>
+        <br>
+        struct distance {
+        <br>
+        var speed: Int
+        <br>
+        }
+        <br>
+        <br>
+        let distance = Distance(speed: 9000)
+        <br>
+        <P>Then the initializer needs to have the value converted</P>
+        <br>
+        let fastDistance = 9000
+        <br>
+        let slowDistnace = (fatsDistance - 8000) / 5
+        <br>
+        <br>
+        let speed = Speed(slow: slowDistance)
+        <br>
+        <br>
+        <h2>Instance Methods</h2>
+        <p>These are functions, however they need to be called on a specific instance of type</p>
+        <p>It modifies and provide access to the properties of structure</p>
+        <br>
+        struct hugeBox {
+        <Br>
+        var height: Int
+        <br>
+        var weight: Int
+        <br>
+        <br>
+        func size() -> Double {
+        <br>
+        return height * weight
+        <br>
+        }
+        <br>
+    }
+        <br>
+        <br>
+        let theHugeBox = HugeBox(height: 45.5, weight: 56.3)
+        <br>
+        let size = theHugeBox.size()
+        <br>
+        <h2>Mutating Methods</h2>
+        <P>Most times the property values has to be updated of structure with the instance method</P>
+        <p>So the mutating keyword needs to be added before the function</p>
+        <p>In the example being shown the increment(by:) methods are what the miles can be added to the instance and the reset() method restarts back to zero</p>
+        <br>
+        struct meterCount {
+        <br>
+        var numberCounted: Double = 0.0
+        <br>
+        <br>
+        mutating func increment() {
+        <br>
+        numberCounted += 0.1
+        <br>
+        mutating func increment(by amount: Double)
+        <br>
+        numberCounted += amount
+        <br>
+        mutating func reset() {
+        <br>
+        numberCounted = 0.0
+        <br>
+        }
+        <br>
+    }
+        <br>
 
         </header>
     </body>
