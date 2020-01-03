@@ -9,22 +9,22 @@
         <a href="../../notes/notes.html">Go Back</a>
         <h2>Structures</h2>
         <p>the word struct means that it is listing out the variables and constants declorations with the type of annotation</p>
-        <p>this is used to define the properties and showing how to use a name property</p>
+        <p>this is used to define a simple declaration for gamerTag structure with the name property</p>
         <br>
         example:
         <br>
         <br>
         struct gamerTag {
         <br>
-        var realName: String
+        var name: String
         <br>
         }
         <br>
-        <P>Access data is stored in it's properties such as the person's realName using the dot syntax</P>
+        <P>Access data can be stored in it's properties such as the person's name using the dot syntax</P>
         <br>
-        let gamer = gamerTag(realName: "Branden")
+        let gamer = gamerTag(name: "Branden")
         <br>
-        print(gamer.realName)
+        print(gamer.name)
         <br>
         <br>
         console output:
@@ -33,20 +33,20 @@
         Branden
         <br>
         <br>
-        <p>The second exapmle shown here is also using the dot syntax methodwith the structure</p>
+        <p>The second exapmle shown here is also using the dot syntax method with the structure</p>
         <br>
         struct personUserName {
         <br>
         var firstName: String
         <br>
-        func introduceMyself {
+        func introduceMyself() {
         <br>
         print("Yo, my name is \(firstName)")
         <br>
         }
         <br>
         }
-        <p>Then it can be called by using the dot syntax</p>
+        <!-- <p>Then this is example below is an instance method using the dot syntax</p>
         <br>
         let person = personUserName(firstName: "Branden")        
         <br>
@@ -56,7 +56,7 @@
         console output
         <br>
         <br>
-        Yo, my name is Branden
+        Yo, my name is Branden -->
         <br>
         <h2>Instances</h2>
         <p>For this proccess the instance must be created which is initialization, and it inherits all properties and features of structure</p>
@@ -100,6 +100,18 @@
         }
         <br>
         let firstGamingPC = gamingComputer(brand: "CyberPower", GPU: "RTX 2080", CPU: "intel core i9", storageNumber: "3000")
+        <br>
+        <p>Then this is example below is an instance method using the dot syntax</p>
+        <br>
+        let person = personUserName(firstName: "Branden")        
+        <br>
+        personUserName.introduceMyself()
+        <br>
+        <br>
+        console output
+        <br>
+        <br>
+        Yo, my name is Branden
         <br>
         <h2>Initializars</h2>
         <P>It's related to the function that uses return type, however it uses the init function and this makes it considered to be the default initializer</P>
