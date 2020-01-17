@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel= "stylesheet" href="../../style.css">
+</head>
+    <body>
+        <header>
+        <h1>Swift Notes 7 Unit 2.4</h1>
+        <a href="../../notes/notes.html">Go Back</a>
+        <h2>Class</h2>
+        <p>You define a class using the Class keyword along with a unique name. The properties have to be defined as part of the class</p>
+        <P>by listing the constant or variable declarations with an appropriate type of annotation.</P>
+        <br>
+        Example:
+        <br>
+        class item {
+        <br>
+        let brand: String
+        <br>
+        <br>
+        init(brand: String) {
+        <br>
+            self.brand = brand
+        <br>
+        }
+        <br>
+        }
+        <br>
+        <br>
+        <P>Also, we can add function to the class definition.</P>
+        <br>
+        class item {
+            <br>
+            let brand: String
+            <br>
+            <br>
+            init(brand: String)
+            <br>
+                self.brand = brand
+            <br>
+            }
+            <br>
+            <br>
+            func priceTag() {
+            <br>
+                print("Price of item is 5.99")
+            <br>
+            }
+            <br>
+            }
+            let item = Item(brand: "Nike") 
+            <br>
+            print(item.brand)
+            <br>
+            <br>
+            <h2>Inheritance</h2>
+            <p>Inheritance and subclasses inherit in the same properties and methods from superclasses.</p>
+            <br>
+            Example 2:
+            <br>
+            class Computer {
+            <br>
+                var cpuPower = 70.5
+                <br>
+                var description: String {
+                <br>
+                    return "Computer's cpu percentage is \(cpuPower)"
+                <br>
+                }
+                <br>
+            }
+            <br>
+            <br>
+            func heatingUp() {
+            <br>
+            }
+            <br>
+            }
+            <br>
+            <br>
+            let someComputer = Computer()
+            <br>
+            print("Computer: \(someComputer.description)")
+            <br>
+            <br>
+            console output:
+            <br>
+            Computer: Computer's cpu percentage is 70.5
+            <br>
+            <br>
+            <h2>Subclasses</h2>
+            <p
+            >Subclassing is an act of base of a new class on an existing class, and it inherits properties and methods.</p>
+            <br>
+            class phone: item {
+            <br>
+                var hasCase = false
+            <br>
+            }
+            <br>
+
+
+
+
+
+        </header>
+    </body>
+</html> 
