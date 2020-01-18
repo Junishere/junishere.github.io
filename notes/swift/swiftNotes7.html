@@ -117,8 +117,56 @@
             <br>
             phone.makeRingSound()
             <br>
+            <P>You can also override the properties by providing a getter or a block of code that returns a value, like a computed property.</P>
             <br>
-            
+            class boat: vehicle {
+            <br>
+            var gear = 5
+            <br>
+            override var information: String {
+            <br>
+            return super.information + "in gear \(gear)"
+            <br>
+            }
+            <br>
+            }
+            <br>
+            <br>
+            <h2>References</h2>
+            <P>This is a special feature of classes to reference values assigned to a variable or a constant.</P>
+            <br>
+            class student {
+            <br>
+            let name: String
+            <br>
+            var course: String
+            <br>
+            var age: Int
+            <br>
+            <br>
+            init(name: String, course: String) {
+            <br>
+            self.name = name
+            <br>
+            self.course = course
+            <br>
+            self.age = age
+            <br>
+            }
+            <br>
+            }
+            <br>
+            <br>
+            var Branden = Student(name: "Branden", course: "pre-calculus", age: 15)
+            <br>
+            var highSchoolStudent = Branden
+            <br>
+            <br>
+            Branden.age += 1
+            <br>
+            <br>
+            print(Branden.age)
+
 
 
 
