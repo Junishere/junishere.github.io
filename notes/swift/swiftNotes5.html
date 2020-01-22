@@ -140,7 +140,39 @@
         <br>
         }
         <br>
-        
+        <h2>Computed Properties</h2>
+        <br>
+        <P>This helps by using mutltiple initializers and involves managing a lot of state, or information. The computed properties create properties that can compute their value based on other instances or initializers.</P>
+        <br>
+        struct Homework {
+        <br>
+        var mathQuestion: Double
+        <br>
+        <br>
+        var mathQuestion2: Double {
+        <br>
+            return mathQuestion * 4.5 + 2.5
+        <br>
+        }
+        <br>
+        <br>
+        var mathQuestion2: Double {
+        <br>
+            return mathQuestion + 12.5
+        <br>
+        }
+        <br>
+        }
+        <br>
+        <p>The computed property can be accessed by using a dot syntax just like with any other property.</p>
+        <br>
+        let currentHomework = Homework(mathQuestion: 12.5)
+        <br>
+        <br>
+        print(currentHomework.mathQuestion)
+        <br>
+        print(currentHomework.mathQuestion2)
+        <br>
 
 
 
