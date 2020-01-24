@@ -25,11 +25,73 @@
         <br>
         if courses.contains("math") {
         <br>
-        print("math is available")
+        print("That course is available")
         <br>
         }
         <br>
         <h2>Array Types</h2>
+        <p>This can be delcared as a type of array using an annotation, collection type annotation, or an array initializer.</p>
+        <br>
+        var myPhoneBattery: [Int] = []
+        <br>
+        <p>We can also use a special collection type annotaion to define an array.</p>
+        <br>
+        var batteryPercent: Percent< Int > = []
+        <br>
+        <p>Also we can add a () after [Int] to initialize an empty array of Int objects.</p>
+        <br>
+        var myPhoneBattery = [Int]()
+        <br>
+        <h2>Working With Arrays</h2>
+        <p>We can use the initializer to create an array of count 100 with repeating default values.</p>
+        var theNumbers = [Int](repeating: 0, count: 100)
+        <br>
+        <br>
+        let count = theNumbers.count 
+        <br>
+        if theNumbers.isEmpty { }
+        <br>
+        <p>The following example will retrieve the first value in a collections of theNumbers</p>
+        let theNumbers = numbers[0]
+        <br>
+        <h2>Dictionaries</h2>
+        <p>This is a list of comma-seperated key/value pairs surrounding by the sqaure brackets, the colon seperates each key and also the resultig value.</p>
+        <br>
+        var points = ["Tom": 2, "Jerry":3]
+        <br>
+        <br>
+        var myList = [String: Int]()
+        <br>
+        var myList = List < String, Int >()
+        <br>
+        var myList = [String: Int] = [:]
+        <br>
+        <h2>Add/Remove/Modify/A Dictionary</h2>
+        <p>In this example if the key "Oli" already exists in the dictionary, then the code will replace the old one with a new one.</p>
+        <br>
+        bookPages["Oli"] = 21
+        <br>
+        <p>We can also use updatevalue(:_, forkey:) to update the dictionary and the value returned from the method.</p>
+        let oldValue = points.updatedValue(21, forkey:"Billy")
+        <br>
+        <br>
+        if let oldValue = points.updatedValue(21, forkey:"Billy") {
+        <br>
+            print("Billy's old value is \(oldValue)")
+        <br>
+        }
+        <br>
+        <br>
+        <h2>Accessing a Dictionary</h2>
+        <p>These collections can be used subsequently, and they need to be converted to arrays.</p>
+        <br>
+        var points = ["Billy": 30, "Sam": 40]
+        <br>
+        let people = Array(points.key)
+        <br>
+        let numbers = Array(points.value)
+        <br>
+        
 
 
 
