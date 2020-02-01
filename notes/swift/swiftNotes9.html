@@ -9,7 +9,127 @@
         <a href="../../notes/notes.html">Go Back</a>
         <h2>Loops</h2>
         <br>
-        
+        <p>A for in loop executes a set of statements for each item within a range of sequence, or a collection, this is useful for repeating like a set of numbers.</p>
+        <br>
+        Example:
+        <br>
+        <br>
+        For randomNumbers in 20...25 {
+        <br>
+        print("\(randomNumbers) has been generated")
+        <br>
+        }
+        <br>
+        <br>
+        console output:
+        <br>
+        <br>
+        20 has been generated 
+        <br>
+        21 has been generated 
+        <br>
+        22 has been generated 
+        <br>
+        23 has been generated 
+        <br>
+        24 has been generated 
+        <br>
+        25 has been generated 
+        <br>
+        <br>
+        <p>We also don't have to put the value in and can just leave it with a "_:" value.</p>
+        <br>
+        <br>
+        for _ in 1..5 {
+        <br>
+            print("What's up")
+        <br>
+        }
+        <br>
+        <br>
+        what's up
+        <br>
+        what's up
+        <br>
+        what's up
+        <br>
+        <br>
+        <br>
+        <p>The for-in syntax can be used iterate over each item in an array.</p>
+        <br>
+        <br>
+        let phones = ["Samsung", "IPhone", "LG"] {
+        <br>
+        for phone in phones
+        <br>
+        print("My phone is a \(phones)")
+        <br>
+        }
+        <br>
+        <br>
+        <br>
+        <p>Since String is a collection type it can also be used in a for in loop because it has the a similar functionalality to an array.</p>
+        <br>
+        for value in "XYZ" {
+        <br>
+        print("the letter values are \(value)")
+        <br>
+        }
+        <br>
+        <br>
+        <h2>While loops</h2>
+        <br>
+        <p>A While loop will continue to loop until it's specified condition is no longer true.</p>
+        <br>
+        var counter = 21 
+        <br>
+        <br>
+        while counter > 12 {
+        <br>
+        <br>
+        CountNumbers()
+        <br>
+        UpdateCounter()
+        <br>
+        }
+        <br>
+        <br>
+        <br>
+        var counter = 21 
+        <br>
+        var countNumbers = true 
+        <br>
+        while countNumbers {
+        <br>
+        counter += 1
+        <br>
+        if counter == 0 {
+        <br>
+        countNumbers = false
+        <br>
+        }
+        <br>
+    }
+        <br>
+        <br>
+        <h2>Control Transfer Statements</h2>
+        <br>
+        <p>There is a swift key where if you put a break it will stop the loop.</p>
+        <br>
+        <br>
+        for serialNumbers in 2368493 {
+        <br>
+        print(serialNumbers)
+        <br>
+        if serialNumbers == 3 {
+        <br>
+            break
+        <br>
+        }
+        <br>
+        }
+        <br>
+
 
 
 
