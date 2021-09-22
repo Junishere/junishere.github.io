@@ -3,7 +3,7 @@ h1 {
     text-align: center;
     text-decoration: underline;
     font-weight: 900;
-    font-family: Copperplate;
+    font-family: Monospace;
     border-style: groove;
     border-width: thick;
     border-color: lightskyblue;
@@ -36,7 +36,7 @@ a:visited {
     color: brown;
 }
 a:hover {
-    background-color:  rgba(139, 175, 41, 0.829);
+    background-color:  rgba(214, 116, 24, 0.829);
 }
 #myCanvas {
     border-style: solid;
